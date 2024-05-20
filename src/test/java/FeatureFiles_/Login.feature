@@ -7,3 +7,11 @@ Feature: Login Functionality
     When Enter valid username and password and click login botton
     Then User should login successfully
 
+  Scenario: Login with invalid username and password
+
+    Given Navigate to Campus
+    When Enter invalid username and password and click login botton
+    Then User should not login successfully
+
+
+

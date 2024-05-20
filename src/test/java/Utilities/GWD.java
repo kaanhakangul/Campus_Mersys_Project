@@ -25,7 +25,6 @@ public class GWD {
 
     public static WebDriver getDriver() {
 
-
         Locale.setDefault(new Locale("EN"));
         System.setProperty("user.language", "EN");
 

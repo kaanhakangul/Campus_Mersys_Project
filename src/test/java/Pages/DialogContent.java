@@ -9,14 +9,16 @@ public class DialogContent extends ParentPage{
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(),this);
     }
-    @FindBy (xpath = "//input[@placeholder='Username']")
+    @FindBy (xpath = "//input[@placeholder='Kullanıcı Adı']")
     public WebElement userName;
-    @FindBy(xpath = "//input[@placeholder='Password']")
+    @FindBy(xpath = "//input[@placeholder='Parola']")
     public WebElement password;
-    @FindBy(xpath = "//span[text()=' LOGIN ']")
+    @FindBy(xpath = "//span[text()=' GİRİŞ YAP ']")
     public WebElement loginButton;
     @FindBy(xpath = "//span[contains(text(),'Welcome')]")
     public WebElement welcomeText;
+    @FindBy(xpath = "//div[contains(text(),'invalid')]")
+    public WebElement invalidText;
 
 
     public WebElement getWebElement(String strElement){

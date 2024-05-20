@@ -25,33 +25,26 @@ public class GWD {
 
     public static WebDriver getDriver() {
 
+
         Locale.setDefault(new Locale("EN"));
         System.setProperty("user.language", "EN");
 
+        if (threadBrowserName.get()==null) // XML den çalışmayan durumlar için
+            threadBrowserName.set("chrome");  // default chrome
 
+        if (threadDriver.get() == null) { //1 kez oluştur
 
-        if (threadDriver.get() == null) {
-
-            switch (threadBrowserName.get()) {
-                case "firefox":
-                    threadDriver.set(new FirefoxDriver());
-                    break;
-                case "edge":
-                    threadDriver.set(new EdgeDriver());
-                    break;
-                default:
-                    threadDriver.set(new ChromeDriver()); //bulunduğu hatta driver yoktu ben bir tane set ettim
-
+            switch (threadBrowserName.get())
+            {
+                case "firefox" : threadDriver.set(new FirefoxDriver()); break;
+                case "edge" : threadDriver.set(new EdgeDriver()); break;
+                default: threadDriver.set(new ChromeDriver());  //bulunduğum hatta driver yok idi, ben bir tane set ettim
             }
 
-            if (threadDriver.get() == null) {// 1 kez oluşturması için
-                threadBrowserName.set("chrome");
-            }
-
-            threadDriver.get().manage().window().maximize(); // Ekranı max yapıyor.
-            threadDriver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20)); // 20 sn mühlet: sayfayı yükleme mühlet
-
+            threadDriver.get().manage().window().maximize();
+            threadDriver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         }
+
         return threadDriver.get();
     }
 

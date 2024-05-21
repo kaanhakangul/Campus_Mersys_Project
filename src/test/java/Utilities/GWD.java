@@ -12,6 +12,7 @@ public class GWD {
 
     private static ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>(); //Her bir thread e özel static
     public static ThreadLocal<String> threadBrowserName = new ThreadLocal<>();
+    public static WebDriver wait;
 
     //threadDriver.get() ->bulunduğu hattaki driverı ver
     //threadDriver.set() ->bulunduğun hata bir tane driver set et.
@@ -28,6 +29,8 @@ public class GWD {
         Locale.setDefault(new Locale("EN"));
         System.setProperty("user.language", "EN");
 
+
+
         if (threadBrowserName.get()==null) // XML den çalışmayan durumlar için
             threadBrowserName.set("chrome");  // default chrome
 
@@ -43,6 +46,7 @@ public class GWD {
             threadDriver.get().manage().window().maximize();
             threadDriver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         }
+
 
         return threadDriver.get();
     }

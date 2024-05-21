@@ -18,8 +18,8 @@ public class LoginSteps {
         GWD.getDriver().get("https://test.mersys.io/");
     }
 
-    @When("Enter valid username and password and click login botton")
-    public void enterValidUsernameAndPasswordAndClickLoginBotton() {
+    @When("Enter valid username and password and click login button")
+    public void enterValidUsernameAndPasswordAndClickLoginButton() {
         dc.mySendKeys(dc.userName,"Student_6");
         dc.mySendKeys(dc.password,"S12345");
         dc.myClick(dc.loginButton);
@@ -30,8 +30,8 @@ public class LoginSteps {
         dc.verifyContainsText(dc.welcomeText,"Welcome");
     }
 
-    @When("Enter invalid username and password and click login botton")
-    public void enterInvalidUsernameAndPasswordAndClickLoginBotton() {
+    @When("Enter invalid username and password and click login button")
+    public void enterInvalidUsernameAndPasswordAndClickLoginButton() {
         dc.mySendKeys(dc.userName,"Student6");
         dc.mySendKeys(dc.password,"S12345");
         dc.myClick(dc.loginButton);

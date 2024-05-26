@@ -6,12 +6,9 @@ import Utilities.Tools;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.checkerframework.checker.units.qual.A;
 import org.testng.Assert;
 
-import javax.tools.Tool;
-
-public class LoginSteps {
+public class _01_LoginSteps {
     DialogContent dc=new DialogContent();
     @Given("Navigate to Campus")
     public void navigateToCampus() {
@@ -41,7 +38,6 @@ public class LoginSteps {
     public void userShouldNotLoginSuccessfully() {
         Tools.Wait(2);
         Assert.assertTrue(dc.loginButton.isEnabled());
-
 
     }
 }

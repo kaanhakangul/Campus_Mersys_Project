@@ -9,11 +9,11 @@ public class DialogContent extends ParentPage{
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(),this);
     }
-    @FindBy (xpath = "//input[@placeholder='Username']")
+    @FindBy (xpath = "//input[@placeholder='Kullanıcı Adı']")
     public WebElement userName;
-    @FindBy(xpath = "//input[@placeholder='Password']")
+    @FindBy(xpath = "//input[@placeholder='Parola']")
     public WebElement password;
-    @FindBy(xpath = "//span[text()=' LOGIN ']")
+    @FindBy(xpath = "//span[text()=' GİRİŞ YAP ']")
     public WebElement loginButton;
     @FindBy(xpath = "//span[contains(text(),'Welcome')]")
     public WebElement welcomeText;
@@ -50,8 +50,12 @@ public class DialogContent extends ParentPage{
     public WebElement messageText;
     @FindBy(xpath = "(//button[@class='mat-mdc-tooltip-trigger mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base'])[1]")
     public WebElement newChatmessageText;
-    @FindBy(xpath = " //span[text()=' Assignment - Geo 45']")
-    public WebElement assignmentGeo;
+    @FindBy(xpath = "//div[text()=' Student_8 11A ']")
+    public WebElement newMessageCheck;
+
+    @FindBy(xpath = "(//button[@class='mat-mdc-tooltip-trigger mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base'])[3]")
+    public WebElement closethewindow;
+
     @FindBy(xpath = "//span[text()='Inbox']")
     public WebElement inboxtext;
 

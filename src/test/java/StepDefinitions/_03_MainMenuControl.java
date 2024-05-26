@@ -15,11 +15,12 @@ import javax.swing.*;
 import java.time.Duration;
 
 public class _03_MainMenuControl {
-    DialogContent dc=new DialogContent();
+    DialogContent dc = new DialogContent();
+
     @Then("user checks home page elements")
     public void userChecksHomePageElements() {
         dc.myClick(dc.courseTab1);
-        dc.verifyContainsText(dc.welcomeText,"Welcome");
+        dc.verifyContainsText(dc.welcomeText, "Welcome");
 
         dc.myClick(dc.calendarTab2);
         dc.wait.until(ExpectedConditions.visibilityOf(dc.calendarTabLabel));
@@ -35,28 +36,24 @@ public class _03_MainMenuControl {
         dc.wait.until(ExpectedConditions.visibilityOf(dc.attendanceTabLabel));
         Assert.assertTrue(dc.attendanceTabLabel.isDisplayed());
 
-       dc.myClick(dc.gradingTab5);
-       dc.wait.until(ExpectedConditions.visibilityOf(dc.gradingTabLabel));
-       Assert.assertTrue(dc.gradingTabLabel.isDisplayed());
+        dc.myClick(dc.gradingTab5);
+        dc.wait.until(ExpectedConditions.visibilityOf(dc.gradingTabLabel));
+        Assert.assertTrue(dc.gradingTabLabel.isDisplayed());
 
-       dc.myClick(dc.hamburger);
+        dc.myClick(dc.hamburger);
         dc.wait.until(ExpectedConditions.visibilityOf(dc.messageText));
-       Assert.assertTrue(dc.messageText.isDisplayed());
-       dc.myClick(dc.messageText);
-       Tools.Wait(2);
-       dc.myClick(dc.inboxtext);
-       Tools.Wait(2);
+        Assert.assertTrue(dc.messageText.isDisplayed());
+        dc.myClick(dc.messageText);
+        Tools.Wait(2);
+        dc.myClick(dc.inboxtext);
+        Tools.Wait(2);
 
 
-       dc.myClick(dc.newChatmessageText);
-       Tools.Wait(2);
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.assignmentGeo));
-       Assert.assertTrue(dc.assignmentGeo.isDisplayed());
-
-
-
-
-
+        dc.myClick(dc.newChatmessageText);
+        Tools.Wait(2);
+        dc.wait.until(ExpectedConditions.visibilityOf(dc.newMessageCheck));
+        Assert.assertTrue(dc.newMessageCheck.isDisplayed());
+        dc.myClick(dc.closethewindow);
 
 
 

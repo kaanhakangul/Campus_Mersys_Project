@@ -74,6 +74,31 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//span[text()='My Certificates']")
     public WebElement MyCertificate;
 
+    @FindBy(xpath = "//span[text()='New Message']")
+    public WebElement HamburgerNewMessage;
+
+
+    @FindBy(xpath = "//span[text()=' New Message ']")
+    public WebElement NewMessageAssert;
+
+    @FindBy(xpath = "//span[text()=' Inbox ']")
+    public WebElement InboxAssert;
+
+    @FindBy(xpath = "//span[text()='Outbox']")
+    public WebElement Outbox;
+
+    @FindBy(xpath = "//span[text()=' Outbox ']")
+    public WebElement OutBoxAssert;
+
+    @FindBy(xpath = "//span[text()='Trash']")
+    public WebElement Trash;
+
+    @FindBy(xpath = "//span[text()=' Trash ']")
+    public WebElement TrashAssert;
+
+
+
+
 
 
 

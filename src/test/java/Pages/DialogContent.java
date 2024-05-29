@@ -48,16 +48,33 @@ public class DialogContent extends ParentPage{
 
     @FindBy(xpath = "//span[text()='Messaging']")
     public WebElement messageText;
-    @FindBy(xpath = "(//button[@class='mat-mdc-tooltip-trigger mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base'])[1]")
+    @FindBy(xpath = "//button[@class='mat-mdc-tooltip-trigger mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base mat-mdc-tooltip-disabled']")
     public WebElement newChatmessageText;
     @FindBy(xpath = "//div[text()=' Student_8 11A ']")
     public WebElement newMessageCheck;
 
-    @FindBy(xpath = "(//button[@class='mat-mdc-tooltip-trigger mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base'])[3]")
+    @FindBy(xpath = "(//button[@class='mat-mdc-tooltip-trigger mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base'])[2]")
     public WebElement closethewindow;
 
     @FindBy(xpath = "//span[text()='Inbox']")
     public WebElement inboxtext;
+
+    @FindBy(xpath = "//span[contains(text(),' Assignment')]")
+    public WebElement assignmenttext;
+
+    @FindBy(xpath = "(//button[@class='mat-mdc-tooltip-trigger mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base'])[1]")
+    public WebElement messagebox;
+
+    @FindBy(xpath = "//span[@class='title dialog-title']")
+    public WebElement messageBoxCheck;
+
+    @FindBy(xpath = "//button[@class='mat-mdc-menu-trigger user-button mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base ng-star-inserted']")
+    public WebElement TopNavProfil;
+
+    @FindBy(xpath = "//span[text()='My Certificates']")
+    public WebElement MyCertificate;
+
+
 
 
 

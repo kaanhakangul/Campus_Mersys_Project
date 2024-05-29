@@ -51,9 +51,26 @@ public class _03_MainMenuControl {
 
         dc.myClick(dc.newChatmessageText);
         Tools.Wait(2);
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.newMessageCheck));
-        Assert.assertTrue(dc.newMessageCheck.isDisplayed());
-        dc.myClick(dc.closethewindow);
+        dc.wait.until(ExpectedConditions.visibilityOf(dc.assignmenttext));
+        Tools.Wait(2);
+        Assert.assertTrue(dc.assignmenttext.isDisplayed());
+        dc.myClick(dc.closethewindow);//hamburgerden sonrakı msj kısmının sonu
+
+
+
+
+        dc.myClick(dc.messagebox);
+        Tools.Wait(2);
+        Assert.assertTrue(dc.messageBoxCheck.isDisplayed());
+        dc.myClick(dc.closethewindow);//2. msj kutusu
+
+        dc.myClick(dc.TopNavProfil);
+        Tools.Wait(2);
+        Assert.assertTrue(dc.MyCertificate.isDisplayed());//profıl kısmı
+
+
+
+
 
 
 

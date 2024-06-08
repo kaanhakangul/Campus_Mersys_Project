@@ -121,6 +121,20 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//span[contains(text(),'Send')]")
     public WebElement SendButton;
 
+    @FindBy(xpath = "//span[text()='Settings']")
+    public WebElement Settings;
+
+    @FindBy(xpath = "//div[@class='user-info']")
+    public WebElement AddUserPhoto;
+
+    @FindBy(xpath = "//button[@class='mat-mdc-tooltip-trigger mdc-fab mdc-fab--mini mat-mdc-mini-fab mat-accent mat-mdc-button-base']")
+    public WebElement choosePhoto;
+
+    @FindBy(xpath = "//span[text()=' Upload ']")
+    public WebElement UploadPhoto;
+
+
+
 
 
 

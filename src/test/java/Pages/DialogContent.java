@@ -96,6 +96,33 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//span[text()=' Trash ']")
     public WebElement TrashAssert;
 
+    @FindBy(css = "#\\32  > div > div > subscribers-dialog > ms-dialog > ms-dialog-buttons > mat-dialog-actions > ms-button:nth-child(1) > button")
+    public WebElement PersonsButton;
+
+    @FindBy(xpath ="//span[text()='Attendance']")
+    public WebElement AttendanceButton;
+
+    @FindBy(xpath ="//span[text()=' ATTENDANCE EXCUSES ']")
+    public WebElement AttendanceExcusesButton;
+
+    @FindBy(xpath ="(//span[@class='mat-mdc-focus-indicator'])[18]")
+    public WebElement AddIcon;
+
+
+    @FindBy(xpath = "//*[@placeholder=\"Message\"]")
+    public WebElement TextBox;
+
+    @FindBy(xpath = "//span[@class='mat-mdc-menu-item-text']")
+    public WebElement AttachFile;
+
+    @FindBy(xpath = "//*[@class='mat-mdc-menu-item mat-mdc-focus-indicator mat-badge mat-badge-accent mat-badge-above mat-badge-after mat-badge-small mat-badge-hidden ng-star-inserted']")
+    public WebElement FromLocal;
+
+    @FindBy(xpath = "//span[contains(text(),'Send')]")
+    public WebElement SendButton;
+
+
+
 
 
 
@@ -106,7 +133,12 @@ public class DialogContent extends ParentPage{
     public WebElement getWebElement(String strElement){
 
         switch (strElement){
-
+            case "AttachFile":
+                return AttachFile;
+            case "FromLocal":
+                return FromLocal;
+            case "SendButton":
+                return SendButton;
 
         }
 

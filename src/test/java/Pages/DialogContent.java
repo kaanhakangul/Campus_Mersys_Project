@@ -133,6 +133,14 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//span[text()=' Upload ']")
     public WebElement UploadPhoto;
 
+    @FindBy(xpath = "//span[text()='Save']")
+    public WebElement SaveButton;
+
+
+
+    @FindBy(xpath = "//*[text()='Profile successfully updated']")
+    public WebElement SuccessMsg;
+
 
 
 

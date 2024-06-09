@@ -96,8 +96,59 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//span[text()=' Trash ']")
     public WebElement TrashAssert;
 
-    @FindBy(css = "#\\32  > div > div > subscribers-dialog > ms-dialog > ms-dialog-buttons > mat-dialog-actions > ms-button:nth-child(1) > button")
-    public WebElement PersonsButton;
+    @FindBy(xpath="//span[contains(text(),'Finance')]")
+    public WebElement financeLink;
+
+    @FindBy(xpath="//span[contains(text(),'My Finance')]")
+    public WebElement myfinanceLink;
+
+    @FindBy(xpath="//span[contains(text(),'Class: 11A')]")
+    public WebElement ChooseStudent;
+
+    @FindBy(xpath="//span[contains(text(),'Online Payment')]")
+    public WebElement AssertOnlinePay;
+
+    @FindBy(xpath="//div[@class='mdc-radio']")
+    public WebElement StripeButton;
+
+    @FindBy(xpath="//*[@class='w-50-p discount-class']")
+    public WebElement Pay;
+
+    @FindBy(xpath="//*[@id='Field-numberInput']")
+    public WebElement CardNumber;
+
+    @FindBy(xpath="//*[@class='p-GridCell p-GridCell--12 p-GridCell--xs6 p-GridCell--sm6 p-GridCell--md3'][1]")
+    public WebElement Expiration;
+
+    @FindBy(xpath="//*[@class='p-GridCell p-GridCell--12 p-GridCell--xs6 p-GridCell--sm6 p-GridCell--md3'][2]")
+    public WebElement Cvc;
+
+
+    @FindBy(xpath="//*[@class='StripeElement']")
+    public WebElement StripeElement;
+
+    @FindBy(xpath="//div[@class='mdc-tab mat-mdc-tab mat-mdc-focus-indicator ng-star-inserted']")
+    public WebElement balanceButton;
+
+    @FindBy(xpath="//*[@class='mat-expansion-panel-header-title ng-tns-c2622717266-41']")
+    public WebElement AsserPayerInfo;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @FindBy(xpath ="//span[text()='Attendance']")
     public WebElement AttendanceButton;
@@ -136,10 +187,11 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//span[text()='Save']")
     public WebElement SaveButton;
 
-
-
     @FindBy(xpath = "//*[text()='Profile successfully updated']")
     public WebElement SuccessMsg;
+
+
+
 
 
 

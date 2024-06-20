@@ -192,8 +192,26 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//*[text()='Profile successfully updated']")
     public WebElement SuccessMsg2;
 
-   // @FindBy(xpath = "//div[text()='Profile successfully updated']")
-   // public WebElement SuccessMsg2;
+    @FindBy(xpath = "(//button[contains(@class, 'mat-mdc-button-wrapper')]//fa-icon)[5]")
+    public WebElement Grading;
+    @FindBy(xpath = "(//span[@class='mdc-tab__text-label'][1])")
+    public WebElement courseGrade;
+    @FindBy(xpath = "//span[contains(text(),' Student Transcript ')]")
+    public WebElement StudentTanscript;
+    @FindBy(xpath = "//span[contains(text(),'Transcript By Subject')]")
+    public WebElement BySubject;
+    @FindBy(xpath = "(//span[@class='mdc-tab__text-label'][1])")
+    public WebElement courseGrade1;
+    @FindBy(xpath = "//button[normalize-space(.)='Print']")
+    public WebElement printButton;
+    @FindBy(xpath = "//span[contains(text(),' Student Transcript ')]")
+    public WebElement studentTranscript;
+    @FindBy(xpath = "//span[contains(text(),'Print')]")
+    public WebElement transcriptPrint;
+    @FindBy(xpath = "//button[normalize-space(.)='Print']")
+    public WebElement printPage;
+    @FindBy(xpath = "//*[@class='svg-inline--fa fa-list-check fa-fw']")
+    public WebElement assignments;
 
 
 

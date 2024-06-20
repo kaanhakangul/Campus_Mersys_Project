@@ -9,11 +9,11 @@ public class DialogContent extends ParentPage{
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(),this);
     }
-    @FindBy (xpath = "//input[@placeholder='Kullanıcı Adı']")
+    @FindBy (xpath = "//input[@placeholder='Username']")
     public WebElement userName;
-    @FindBy(xpath = "//input[@placeholder='Parola']")
+    @FindBy(xpath = "//input[@placeholder='Password']")
     public WebElement password;
-    @FindBy(xpath = "//span[text()=' GİRİŞ YAP ']")
+    @FindBy(xpath = "//span[text()=' LOGIN ']")
     public WebElement loginButton;
     @FindBy(xpath = "//span[contains(text(),'Welcome')]")
     public WebElement welcomeText;
@@ -133,23 +133,6 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath="//*[@class='mat-expansion-panel-header-title ng-tns-c2622717266-41']")
     public WebElement AsserPayerInfo;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @FindBy(xpath ="//span[text()='Attendance']")
     public WebElement AttendanceButton;
 
@@ -189,6 +172,48 @@ public class DialogContent extends ParentPage{
 
     @FindBy(xpath = "//*[text()='Profile successfully updated']")
     public WebElement SuccessMsg;
+    @FindBy(xpath = "//div[@id='mat-select-value-7']")
+    public WebElement DefaultTheme;
+
+    @FindBy(xpath = "//*[@id='mat-option-2']")
+    public WebElement DefaultTheme2;
+    @FindBy(xpath = "//*[@id='mat-option-3']")
+    public WebElement PurpleTheme;
+    @FindBy(xpath = "//*[@id='mat-select-value-15']")
+    public WebElement BackToTheme;
+
+    @FindBy(xpath = "//*[@id='mat-option-4']")
+    public WebElement DarkPurpleTheme;
+    @FindBy(xpath = "//*[@id='mat-option-5']")
+    public WebElement IndigoTheme;
+    @FindBy(xpath = "//*[@class='svg-inline--fa fa-floppy-disk fa-fw']")
+    public WebElement SaveButton2;
+
+    @FindBy(xpath = "//*[text()='Profile successfully updated']")
+    public WebElement SuccessMsg2;
+
+    @FindBy(xpath = "(//button[contains(@class, 'mat-mdc-button-wrapper')]//fa-icon)[5]")
+    public WebElement Grading;
+    @FindBy(xpath = "(//span[@class='mdc-tab__text-label'][1])")
+    public WebElement courseGrade;
+    @FindBy(xpath = "//span[contains(text(),' Student Transcript ')]")
+    public WebElement StudentTanscript;
+    @FindBy(xpath = "//span[contains(text(),'Transcript By Subject')]")
+    public WebElement BySubject;
+    @FindBy(xpath = "(//span[@class='mdc-tab__text-label'][1])")
+    public WebElement courseGrade1;
+    @FindBy(xpath = "//button[normalize-space(.)='Print']")
+    public WebElement printButton;
+    @FindBy(xpath = "//span[contains(text(),' Student Transcript ')]")
+    public WebElement studentTranscript;
+    @FindBy(xpath = "//span[contains(text(),'Print')]")
+    public WebElement transcriptPrint;
+    @FindBy(xpath = "//button[normalize-space(.)='Print']")
+    public WebElement printPage;
+    @FindBy(xpath = "//*[@class='svg-inline--fa fa-list-check fa-fw']")
+    public WebElement assignments;
+
+
 
 
 
